@@ -1,0 +1,79 @@
+name: merkle-tree 
+version: 0.1.0
+synopsis: An implementation of a Merkle Tree and merkle tree proofs
+maintainer: Thomas Dietert (thomas@adjoint.io)
+license: Apache
+github: adjoint-io/merkle-tree
+category: Development
+extra-source-files:
+  - README.md
+
+dependencies:
+  # Prelude
+  - base >= 4.7 && < 5
+  - protolude >= 0.2
+
+  # Text
+  - bytestring
+
+  # Cryptograhy
+  - cryptonite >= 0.21
+  - memory
+  
+  # Serialization
+  - cereal
+
+  # Testing
+  - random
+
+library:
+  source-dirs: src
+
+  ghc-options:
+    -fwarn-tabs
+    -fwarn-incomplete-patterns
+    -fwarn-incomplete-uni-patterns
+    -fwarn-incomplete-record-updates
+    -fwarn-redundant-constraints
+    -fwarn-implicit-prelude
+    -fwarn-overflowed-literals
+    -fwarn-orphans
+    -fwarn-identities
+    -fwarn-dodgy-exports
+    -fwarn-dodgy-imports
+    -fwarn-duplicate-exports
+    -fwarn-overlapping-patterns
+    -fwarn-missing-fields
+    -fwarn-missing-methods
+    -fwarn-missing-signatures
+    -fwarn-noncanonical-monad-instances
+    -fwarn-unused-pattern-binds
+    -fwarn-unused-type-patterns
+    -fwarn-unrecognised-pragmas
+    -fwarn-wrong-do-bind
+    -fwarn-hi-shadowing
+    -fno-warn-name-shadowing
+    -fno-warn-unused-binds
+    -fno-warn-unused-matches
+    -fno-warn-unused-do-bind
+
+  default-extensions:
+    - OverloadedStrings
+    - NoImplicitPrelude
+    - FlexibleInstances
+
+  exposed-modules:
+    Crypto.Hash.MerkleTree
+
+tests:
+  merkle-test:
+    dependencies:
+    - base >= 4.7 && < 5
+    - merkle-tree
+    - protolude >= 0.2
+    - cereal
+    - QuickCheck
+    - tasty
+    - tasty-quickcheck
+    main: Main.hs
+    source-dirs: test

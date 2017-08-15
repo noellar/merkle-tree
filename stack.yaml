@@ -1,0 +1,13 @@
+resolver: lts-9.0
+
+require-stack-version: ">=1.2"
+
+packages:
+- '.'
+
+extra-deps:
+- protolude-0.2
+
+flags: {}
+
+extra-package-dbs: []
