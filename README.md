@@ -2,12 +2,12 @@
 
 This library implements a merkle-tree data structure, for representing a list of
 hashed data as a binary tree of pairs of hashes converging to a single hash, the
-`merkle root`. SHA3_256 is used as the hashing algorithm.
+`merkle root`. `SHA3_256` is used as the hashing algorithm.
 
 # Description
 
 A Merkle tree is a tamper-resistant data structure that allows a large amount of
-data to be compressed into a single number and can be queried for the presence
+data to be compressed into a single hash and can be queried for the presence
 of specific elements in the data with a proof constructed in logarithmic space.
 
 ## Construction
@@ -41,7 +41,7 @@ transaction has been included on the chain or not. This can be accomplished
 by the lightweight node supplying the transaction hash and a block index,
 querying a full node for a merkle inclusion proof of the transaction's inclusion
 in the block with the index supplied. If the full node finds the transaction in
-that block and responds with the inclusion proof and the block's merkle rooti.
+that block and responds with the inclusion proof and the block's merkle root.
 With this information, it takes `O(log(n))` for the lightweight node to validate
 the inclusion proof.
 
