@@ -55,8 +55,7 @@ merkleProof
 -- | Validates a Merkle Inclusion Proof
 validateMerkleProof 
  :: MerkleProof a  -- ^ Inclusion proof constructed by the prover  
- -> MerkleRoot a   -- ^ Root of the merkle tree from which the proof was
- constructed
+ -> MerkleRoot a   -- ^ Root of the merkle tree from which the proof was constructed
  -> MerkleRoot a   -- ^ Leaf root hash for which the proof was constructed 
  -> Bool           -- ^ Leaf root inclusion
 ```
