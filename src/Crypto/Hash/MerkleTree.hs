@@ -28,10 +28,6 @@ module Crypto.Hash.MerkleTree (
   mtHeight,
 
   -- ** Testing
-  testMerkle3,
-  testMerkle4,
-  testMerkle5,
-  testMerkle6,
   testMerkleProofN,
 ) where
 
@@ -250,18 +246,6 @@ merkleHash = sha256
 -------------------------------------------------------------------------------
 -- Testing
 -------------------------------------------------------------------------------
-
-testMerkle3 :: MerkleTree ByteString
-testMerkle3 = mkMerkleTree ["one", "two", "three"]
-
-testMerkle4 :: MerkleTree ByteString
-testMerkle4 = mkMerkleTree ["one", "two", "three", "four"]
-
-testMerkle5 :: MerkleTree ByteString
-testMerkle5 = mkMerkleTree ["one", "two", "three", "four", "five"]
-
-testMerkle6 :: MerkleTree ByteString
-testMerkle6 = mkMerkleTree ["one", "two", "three", "four", "five", "six"]
 
 -- | Constructs a merkle tree and random leaf root to test inclusion of
 testMerkleProofN :: Int -> IO Bool
