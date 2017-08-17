@@ -14,11 +14,10 @@ of specific elements in the data with a proof constructed in logarithmic space.
 
 A Merkle tree is a binary tree of hashes, in which all the leaf nodes are the
 individual data elements in the block. To construct a merkle tree, the initial
-data elements are first hashed using the merkle tree hash function (usually
-sha256) to generate the leaf nodes of the tree. The resulting hashed data are
-subsequently hashed together in pairs to create the parent nodes of the leaf
-nodes. This process continues until it results in a single hash known as the
-merkle root.
+data elements are first hashed using the merkle tree hash function to generate 
+the leaf nodes of the tree. The resulting hashed data are subsequently hashed 
+together in pairs to create the parent nodes of the leaf nodes. This process 
+continues until it results in a single hash known as the merkle root.
 
 ```haskell
 -- | Constructs a Merkle Tree from a list of ByteStrings
